@@ -7,8 +7,8 @@ import { ProductType } from '../models/ProductType';
   providedIn: 'root'
 })
 export class ProductService {
-  productListUrl = 'http://localhost:4200/assets/data.json'
-  productUrl = 'http://localhost:4200/assets/data.json/products';
+  productListUrl = '../../assets/data.json'
+  productUrl = '../../assets/data.json/products';
 
   constructor( private http: HttpClient) { }
 
