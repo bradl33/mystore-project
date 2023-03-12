@@ -6,15 +6,13 @@
                 <h5>{{ cartItem.product.name }}</h5>
                 <p>{{ cartItem.product.price | currency }}</p>
                 <p> Quantity: {{ cartItem.product.quantity }}
-                    <select #item (change)="onUpdatedQuantity(item.value, cartItem)" class="form-select" style="width: 100px">
+                    <select class="form-select" #item (change)="onUpdatedQuantity(item.value, cartItem)" style="width: 120px">
                         <option  *ngFor="let i of ['1', '2', '3', '4', '5']" 
                             [ngValue]="i" [selected]="i === '1'"> {{ i }} 
                         </option>
                     </select>
                 </p>
-                <button (click)="onRemoveCartItem(cartItem)" class="btn btn-primary">
-                    Remove
-                </button>
+                <button class="btn btn-primary" (click)="onRemoveCartItem(cartItem)"> Remove </button>
             </div>
         </div>
         <div class="total">
@@ -24,7 +22,9 @@
 
     <div class="customer-information">
         <div class="container">
-            <app-customer-information (customerInfo)="onSubmit($event)"></app-customer-information>
+            <app-customer-information (customerInfo)="onSubmit($event)">
+                
+            </app-customer-information>
         </div>
     </div>
 </div>
